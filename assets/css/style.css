@@ -158,7 +158,7 @@ p{margin-bottom:12px}
 
 /* ===== Página minimalista (home-c) ===== */
 .home-c .mini{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 20px}
-.home-c .cards-apps{margin-top:28px}
+.home-c .cards-apps{margin-top:28px;width:100%;justify-content:center}
 .home-c .card-app{padding:20px}
 
 /* ===== Responsivo ===== */
