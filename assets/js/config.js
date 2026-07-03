@@ -17,6 +17,25 @@
     document.body.className = document.body.className
       .replace(/\b(layout|tema)-\S+/g, '').trim();
     document.body.classList.add('layout-' + layout, 'tema-' + tema);
+    atualizarBotaoTema(tema);
+  }
+
+  var botaoTema = null;
+  function atualizarBotaoTema(tema) {
+    if (botaoTema) botaoTema.textContent = tema === 'marinho' ? '☀️' : '🌙';
+  }
+
+  function criarBotaoTema() {
+    botaoTema = document.createElement('button');
+    botaoTema.type = 'button';
+    botaoTema.className = 'botao-tema';
+    botaoTema.setAttribute('aria-label', 'Alternar entre tema claro e escuro');
+    botaoTema.addEventListener('click', function () {
+      var atual = pref('tema', TEMAS, PADRAO.tema);
+      salvar('tema', atual === 'marinho' ? 'claro' : 'marinho');
+    });
+    document.body.appendChild(botaoTema);
+    atualizarBotaoTema(pref('tema', TEMAS, PADRAO.tema));
   }
 
   function salvar(chave, valor) {
@@ -59,6 +78,7 @@
     marcar();
   }
 
+  criarBotaoTema();
   aplicar();
   if (/[?&]config\b/.test(location.search)) abrirPainel();
 

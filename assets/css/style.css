@@ -140,6 +140,16 @@ p{margin-bottom:12px}
 .rodape a:hover{color:var(--texto)}
 .rodape .linha{margin-bottom:6px}
 
+/* ===== Botão claro/escuro ===== */
+.botao-tema{
+  position:fixed;top:14px;right:14px;z-index:900;
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--borda);background:var(--card);
+  font-size:1.15rem;cursor:pointer;box-shadow:var(--sombra);
+  display:flex;align-items:center;justify-content:center;
+}
+.botao-tema:hover{transform:scale(1.08)}
+
 /* ===== Painel de configuração (?config) ===== */
 .painel-config{
   position:fixed;right:16px;bottom:16px;z-index:1000;
