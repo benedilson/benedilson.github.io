@@ -61,4 +61,8 @@
 
   aplicar();
   if (/[?&]config\b/.test(location.search)) abrirPainel();
+
+  document.querySelectorAll('.ano-atual').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 })();
