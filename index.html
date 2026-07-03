@@ -3,31 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benedict Apps</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #eee;
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    main { padding: 2rem; }
-    h1 { color: #2ecc40; }
-    a { color: #2ecc40; }
-    p.muted { color: #999; font-style: italic; }
-  </style>
+  <title>Benedict Apps — Apps com propósito</title>
+  <meta name="description" content="Apps para vocação, fé e crescimento pessoal: Projeto de Vida (orientação vocacional) e Rosa a Maria (vida de oração católica).">
+  <meta property="og:title" content="Benedict Apps — Apps com propósito">
+  <meta property="og:description" content="Projeto de Vida e Rosa a Maria: descubra sua vocação e aprofunde sua vida de oração.">
+  <meta property="og:image" content="https://benedilson.github.io/assets/img/icon-projeto-de-vida.png">
+  <link rel="icon" href="assets/img/icon-projeto-de-vida.png">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <main>
-    <h1>Benedict Apps</h1>
-    <p>Aplicativos Android: Projeto de Vida, Rosa a Maria e FreshKeep.</p>
-    <p><a href="https://sites.google.com/view/benedict-apps">Visite nosso site completo</a></p>
-    <p class="muted">Contato: noslideneb@gmail.com</p>
-  </main>
+<body class="layout-b tema-claro">
+<main>
+
+  <!-- ===== LAYOUT A: one-page ===== -->
+  <div class="home-a">
+    <header class="hero">
+      <div class="container">
+        <div class="marca">Benedict Apps</div>
+        <h1>Apps com propósito para a sua caminhada</h1>
+        <p>Vocação, fé e crescimento pessoal — direto no seu celular.</p>
+      </div>
+    </header>
+
+    <section class="secao-app" id="projeto-de-vida">
+      <div class="container">
+        <div class="cabecalho">
+          <img src="assets/img/icon-projeto-de-vida.png" alt="Ícone do app Projeto de Vida">
+          <div>
+            <h2 class="destaque-pdv">Projeto de Vida</h2>
+            <p class="suave" style="margin:0">Orientação vocacional para jovens</p>
+          </div>
+        </div>
+        <p>Você sabe para onde está indo na vida? Descubra seus talentos, entenda seu perfil e escolha um caminho com propósito.</p>
+        <ul class="lista-recursos">
+          <li>Teste DISC — conheça seu perfil comportamental</li>
+          <li>Teste de Holland — descubra suas áreas de interesse</li>
+          <li>Carreiras recomendadas para o seu perfil</li>
+          <li>Discernimento vocacional — a vida religiosa pode ser um chamado?</li>
+        </ul>
+        <a class="btn-conhecer" href="projeto-de-vida.html">Saiba mais</a>
+        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.projetovida.app" target="_blank" rel="noopener">
+          <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+        </a>
+      </div>
+    </section>
+
+    <section class="secao-app" id="rosa-a-maria">
+      <div class="container">
+        <div class="cabecalho">
+          <img src="assets/img/icon-rosa-a-maria.png" alt="Ícone do app Rosa a Maria">
+          <div>
+            <h2 class="destaque-rosa">Rosa a Maria</h2>
+            <p class="suave" style="margin:0">Acompanhamento espiritual católico</p>
+          </div>
+        </div>
+        <p>Um companheiro para a sua vida de oração, inspirado na devoção a Nossa Senhora.</p>
+        <ul class="lista-recursos">
+          <li>Terço completo, passo a passo, com os mistérios do dia</li>
+          <li>Lectio Divina nos quatro passos tradicionais</li>
+          <li>Pedrinhas de Salvação — 7 práticas espirituais diárias</li>
+          <li>Diário espiritual — seus dados ficam só no seu aparelho</li>
+        </ul>
+        <a class="btn-conhecer" href="rosa-a-maria.html">Saiba mais</a>
+        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.rosamistica.rosa_mistica" target="_blank" rel="noopener">
+          <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="selo-breve">
+          <span class="etiqueta">EM BREVE</span>
+          <h3>FreshKeep</h3>
+          <p class="suave" style="margin:0">Um novo app da Benedict Apps está chegando.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== LAYOUT B: hub (padrão) ===== -->
+  <div class="home-b">
+    <header class="hero">
+      <div class="container">
+        <div class="marca">Benedict Apps</div>
+        <h1>Apps com propósito para a sua caminhada</h1>
+        <p>Vocação, fé e crescimento pessoal — direto no seu celular.</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="cards-apps">
+          <div class="card-app">
+            <img class="icone" src="assets/img/icon-projeto-de-vida.png" alt="Ícone do app Projeto de Vida">
+            <h3 class="destaque-pdv">Projeto de Vida</h3>
+            <p>Descubra sua vocação com testes sérios e orientação de verdade.</p>
+            <a class="btn-conhecer" href="projeto-de-vida.html">Conhecer o app</a>
+            <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.projetovida.app" target="_blank" rel="noopener">
+              <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+            </a>
+          </div>
+          <div class="card-app">
+            <img class="icone" src="assets/img/icon-rosa-a-maria.png" alt="Ícone do app Rosa a Maria">
+            <h3 class="destaque-rosa">Rosa a Maria</h3>
+            <p>Reze o Terço, medite a Palavra e acompanhe sua vida espiritual.</p>
+            <a class="btn-conhecer" href="rosa-a-maria.html">Conhecer o app</a>
+            <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.rosamistica.rosa_mistica" target="_blank" rel="noopener">
+              <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+            </a>
+          </div>
+        </div>
+        <div class="selo-breve">
+          <span class="etiqueta">EM BREVE</span>
+          <h3>FreshKeep</h3>
+          <p class="suave" style="margin:0">Um novo app da Benedict Apps está chegando.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== LAYOUT C: minimalista ===== -->
+  <div class="home-c">
+    <div class="mini">
+      <div class="marca">Benedict Apps</div>
+      <h1>Apps com propósito para a sua caminhada</h1>
+      <div class="cards-apps">
+        <div class="card-app">
+          <img class="icone-mini" src="assets/img/icon-projeto-de-vida.png" alt="Ícone do app Projeto de Vida">
+          <h3 class="destaque-pdv"><a href="projeto-de-vida.html" style="text-decoration:none">Projeto de Vida</a></h3>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.projetovida.app" target="_blank" rel="noopener">
+            <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+          </a>
+        </div>
+        <div class="card-app">
+          <img class="icone-mini" src="assets/img/icon-rosa-a-maria.png" alt="Ícone do app Rosa a Maria">
+          <h3 class="destaque-rosa"><a href="rosa-a-maria.html" style="text-decoration:none">Rosa a Maria</a></h3>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.rosamistica.rosa_mistica" target="_blank" rel="noopener">
+            <img src="assets/img/badge-google-play.png" alt="Disponível no Google Play">
+          </a>
+        </div>
+      </div>
+      <p class="suave" style="margin-top:24px">FreshKeep — em breve · <a href="mailto:noslideneb@gmail.com">noslideneb@gmail.com</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="rodape">
+  <div class="linha"><strong>Benedict Apps</strong> · Brasília, Brasil · <a href="mailto:noslideneb@gmail.com">noslideneb@gmail.com</a></div>
+  <div class="linha">
+    <a href="privacidade-projeto-de-vida.html">Privacidade — Projeto de Vida</a> ·
+    <a href="privacidade-rosa-a-maria.html">Privacidade — Rosa a Maria</a>
+  </div>
+  <div class="linha">
+    <a href="https://play.google.com/store/apps/details?id=com.projetovida.app" target="_blank" rel="noopener">Projeto de Vida no Google Play</a> ·
+    <a href="https://play.google.com/store/apps/details?id=com.rosamistica.rosa_mistica" target="_blank" rel="noopener">Rosa a Maria no Google Play</a>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
 </body>
 </html>
