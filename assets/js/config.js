@@ -1,5 +1,5 @@
 (function () {
-  var PADRAO = { layout: 'b', tema: 'claro' };
+  var PADRAO = { layout: 'b', tema: 'marinho' };
   var LAYOUTS = { a: 'One-page', b: 'Hub', c: 'Minimalista' };
   var TEMAS = { claro: 'Claro e acolhedor', marinho: 'Marinho e dourado', vibrante: 'Vibrante moderno' };
 
