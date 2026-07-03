@@ -150,9 +150,37 @@ p{margin-bottom:12px}
 }
 .botao-tema:hover{transform:scale(1.08)}
 
+/* ===== Botão flutuante do WhatsApp ===== */
+.botao-whats{
+  position:fixed;bottom:16px;right:16px;z-index:900;
+  width:56px;height:56px;border-radius:50%;background:#25d366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .15s;
+}
+.botao-whats:hover{transform:scale(1.08)}
+.botao-whats svg{width:30px;height:30px;fill:#fff}
+
+/* ===== Seção de apoio (Pix) ===== */
+.apoio{border-top:1px solid var(--borda);text-align:center}
+.apoio .qr-pix{
+  width:200px;height:200px;margin:16px auto;border-radius:14px;
+  border:1px solid var(--borda);box-shadow:var(--sombra);background:#fff;padding:8px;
+}
+.apoio .chave-pix{
+  display:inline-block;font-family:Consolas,monospace;font-size:.85rem;
+  background:var(--card);border:1px solid var(--borda);border-radius:8px;
+  padding:8px 14px;margin:6px 0;word-break:break-all;
+}
+.apoio .btn-copiar{
+  display:inline-block;margin-left:8px;padding:8px 18px;border-radius:999px;
+  border:1px solid var(--borda);background:var(--card);color:var(--texto);
+  cursor:pointer;font-weight:600;font-size:.85rem;
+}
+.apoio .btn-copiar:hover{opacity:.75}
+
 /* ===== Painel de configuração (?config) ===== */
 .painel-config{
-  position:fixed;right:16px;bottom:16px;z-index:1000;
+  position:fixed;right:16px;bottom:84px;z-index:1000;
   background:#1c1c1e;color:#f2f2f2;border-radius:14px;padding:16px 18px;
   box-shadow:0 8px 30px rgba(0,0,0,.45);font-size:.85rem;max-width:280px;
   font-family:system-ui,Arial,sans-serif;

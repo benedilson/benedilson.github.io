@@ -78,11 +78,44 @@
     marcar();
   }
 
+  function criarBotaoWhats() {
+    var a = document.createElement('a');
+    a.className = 'botao-whats';
+    a.href = 'https://wa.me/5561991509056?text=' + encodeURIComponent('Olá! Vi o site da Benedict Apps e tenho interesse em um app personalizado.');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('aria-label', 'Fale comigo no WhatsApp sobre um app personalizado');
+    a.innerHTML = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .8C7.7.8 1 7.4 1 15.6c0 2.8.8 5.4 2.2 7.7L1 31.2l8.2-2.1c2.2 1.2 4.6 1.8 6.8 1.8 8.3 0 15-6.6 15-14.8S24.3.8 16 .8zm0 27.1c-2.2 0-4.4-.6-6.3-1.7l-.5-.3-4.7 1.2 1.3-4.5-.3-.5c-1.3-2-2-4.3-2-6.6C3.5 8.7 9.1 3.2 16 3.2s12.5 5.5 12.5 12.4S22.9 27.9 16 27.9zm7-9.2c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.3 0-.5-.1-.7-.1-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.2.8.9.3 1.8.3 2.5.2.8-.1 2.3-.9 2.7-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5z"/></svg>';
+    document.body.appendChild(a);
+  }
+
   criarBotaoTema();
+  criarBotaoWhats();
   aplicar();
   if (/[?&]config\b/.test(location.search)) abrirPainel();
 
   document.querySelectorAll('.ano-atual').forEach(function (el) {
     el.textContent = new Date().getFullYear();
+  });
+
+  document.querySelectorAll('[data-copiar]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var texto = btn.getAttribute('data-copiar');
+      function feito() {
+        var original = btn.textContent;
+        btn.textContent = 'Copiada! 🙏';
+        setTimeout(function () { btn.textContent = original; }, 2500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(feito);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = texto;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); feito(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
   });
 })();
